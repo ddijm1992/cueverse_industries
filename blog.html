@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>Blog - Cueverse</title><link rel="stylesheet" href="styles.css" /></head>
+<body>
+<header><h1>Cueverse Blog</h1></header>
+<main>
+<ul id="blog-posts"></ul>
+<div class="commentbox"></div>
+</main>
+<footer><p>&copy; 2025 Cueverse Industries</p></footer>
+<script>
+fetch('blog/blog.json')
+  .then(res => res.json())
+  .then(data => {
+    const posts = data.map(post => `<li><h3>${post.title}</h3><p>${post.date}</p><p>${post.content}</p></li>`).join('');
+    document.getElementById('blog-posts').innerHTML = posts;
+  });
+</script>
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>commentBox('5656447593480192-proj')</script>
+</body></html>
