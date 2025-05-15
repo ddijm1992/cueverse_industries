@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true,
+  "redirects": [],
+  "rewrites": [],
+  "headers": [],
+  "trailingSlash": false,
+  "routes": [],
+  "version": 2
+}
